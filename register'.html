@@ -129,7 +129,7 @@
 			  for(cust in $scope.Users)
 			    {
 			      c=0
-			      if($scope.cust.Uname===ID && $scope.cust.password===Pwd)
+			      if($scope.cust.Uname===$scope.ID && $scope.cust.password===$scope.Pwd)
 			      {
 			        alert('Login Successful.');
 			        loggedIn = true;
