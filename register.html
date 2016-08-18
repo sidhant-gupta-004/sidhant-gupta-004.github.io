@@ -1,7 +1,8 @@
 <!DOCTYPE HTML>
-<html ng-app>
+<html ng-app = 'login'>
 	<head>
 		<title>Register</title>
+		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 		<!-- Optional theme -->
@@ -10,21 +11,26 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 		<!-- Font Awesome Import -->
 		<script src="https://use.fontawesome.com/8b07504620.js"></script>
 
+
 	</head>
 
-	<body style = 'background-color: purple'>
+	<body style = 'background-color: purple' ng-controller='LoginCreds'>
 		<header>
-		<ul class="nav nav-pills" style = 'background-color:DarkKhaki'>
-			<li role="presentation" class="active"><a href="index.html">Home</a></li>
-			<li role="presentation"><a href="products.html">Products</a></li>
-			<li role="presentation"><a href="register.html">Register</a></li>
-			<li role="presentation"><a href="cart.html">Cart</a></li>
-		</ul>
+			<ul class="nav nav-pills" style = 'background-color:DarkKhaki'>
+				<li role="presentation" class="active"><a href="index.html">Home</a></li>
+				<li role="presentation"><a href="products.html">Products</a></li>
+				<li role="presentation"><a href="register.html">Register</a></li>
+				<li role="presentation"><a href="cart.html">Cart</a></li>
+			</ul>
 		</header>
-		
+
+		<div ng-view = ''></div>
+
 		<div class="row">
 	  		<div class="col-xs-6 col-md-3 col-md-offset-2" align='center'>
 	  			<div class='thumbnail' border-width=1px style='position: absolute; top: 100px'>
@@ -34,16 +40,19 @@
 					<h3>Login</h3>
 					<div class="input-group">
 						  <span class="input-group-addon" id="basic-addon1"> Login ID </span>
-						  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+						  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" ng-model='ID'>
 					</div>
 					<div class="input-group">
 						  <span class="input-group-addon" id="basic-addon2">Password</span>
-						  <input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon2">
+						  <input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon2" ng-model='Pwd'>
 					</div>
 					<br />
 					<div class="btn-group" role="group" aria-label="...">
-						 <a href = '#'><button type="button" class="btn btn-default">Login</button></a>
+						 <button type="button" class="btn btn-default" onClick = 'Check()'>Login</button>
 					</div>
+
+
+
 				</div>
 			</div>
 		</div>
@@ -57,7 +66,7 @@
 					<h3>Sign Up</h3>
 					<div class="input-group">
 						  <span class="input-group-addon" id="basic-addon1"> Login ID </span>
-						  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" ng-model='name' /> {{ name }}
+						  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" ng-model='name' />
 					</div>
 					<div class="input-group">
 						  <span class="input-group-addon" id="basic-addon2">Password</span>
@@ -65,13 +74,76 @@
 					</div>
 					<br />
 					<div class="btn-group" role="group" aria-label="...">
-						 <a href = '#'><button type="button" class="btn btn-default">Login</button></a>
+						 <a href = '#'><button type="button" class="btn btn-default">Sign Up</button></a>
 					</div>
 				</div>
 			</div>
 		</div>
+		</div>
 
 		<script src = 'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js'></script>
+
+		<script>
+		var login = angular.module('login', [])
+
+
+		  /*login.config (function ($routeProvider) {
+		    $routeProvider
+		      .when('/',
+		      {
+		        templateURL: 'index.html'
+		      })
+		      .when('/register.html',
+		      {
+		        templateURL: 'register.html'
+		      })
+		      .when('/cart.html',
+		      {
+		        templateURL: 'cart.html'
+		      })
+		      .when('/products.html',
+		      {
+		        templateURL: 'products.html'
+		      })
+		      .otherwise(
+		      {
+		        redirectTo: '/'
+		      });
+		  });*/
+
+		  login.controller ('LoginCreds',
+
+			function ($scope)
+			{
+				$scope.Users =
+			  [
+			    {Uname: 'sidhantgupta004', password: '123shop'},
+			    {Uname: 'guptasidhant004', password: 'shopper345'},
+			    {Uname: 'rohitC', password: '99shopper'}
+			  ]
+			},
+
+		  function Check ($scope)
+		  {
+
+			  for(cust in $scope.Users)
+			    {
+			      c=0
+			      if($scope.cust.Uname===ID && $scope.cust.password===Pwd)
+			      {
+			        alert('Login Successful.');
+			        loggedIn = true;
+			        c++;
+			      }
+			    }
+			    if (c===0)
+			    {
+			      alert('Wrong credentials. Login failed.');
+			      loggedIn = false;
+			    }
+		  }
+		  )
+		</script>
 
 	</body>
 </html>
