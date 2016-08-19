@@ -1,7 +1,9 @@
 <!DOCTYPE HTML>
 <html ng-app = 'login'>
 	<head>
+		
 		<title>Register</title>
+		
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -20,6 +22,7 @@
 	</head>
 
 	<body style = 'background-color: purple' ng-controller='LoginCreds'>
+
 		<header>
 			<ul class="nav nav-pills" style = 'background-color:DarkKhaki'>
 				<li role="presentation" class="active"><a href="index.html">Home</a></li>
@@ -40,15 +43,15 @@
 					<h3>Login</h3>
 					<div class="input-group">
 						  <span class="input-group-addon" id="basic-addon1"> Login ID </span>
-						  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" ng-model='ID'>
+						  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" ng-model='ID' id='ID'>
 					</div>
 					<div class="input-group">
 						  <span class="input-group-addon" id="basic-addon2">Password</span>
-						  <input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon2" ng-model='Pwd'>
+						  <input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon2" ng-model='Pwd' id='Pwd'>
 					</div>
 					<br />
 					<div class="btn-group" role="group" aria-label="...">
-						 <button type="button" class="btn btn-default" onClick = 'Check()'>Login</button>
+						 <button type="button" class="btn btn-default" onclick = 'logger()'>Login</button>
 					</div>
 
 
@@ -74,76 +77,18 @@
 					</div>
 					<br />
 					<div class="btn-group" role="group" aria-label="...">
-						 <a href = '#'><button type="button" class="btn btn-default">Sign Up</button></a>
+						 <button type="button" class="btn btn-default">Sign Up</button>
 					</div>
 				</div>
 			</div>
 		</div>
 		</div>
 
+		<!-- <script src = 'afun.js'></script> -->
+
 		<script src = 'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js'></script>
 
-		<script>
-		var login = angular.module('login', [])
-
-
-		  /*login.config (function ($routeProvider) {
-		    $routeProvider
-		      .when('/',
-		      {
-		        templateURL: 'index.html'
-		      })
-		      .when('/register.html',
-		      {
-		        templateURL: 'register.html'
-		      })
-		      .when('/cart.html',
-		      {
-		        templateURL: 'cart.html'
-		      })
-		      .when('/products.html',
-		      {
-		        templateURL: 'products.html'
-		      })
-		      .otherwise(
-		      {
-		        redirectTo: '/'
-		      });
-		  });*/
-
-		  login.controller ('LoginCreds',
-
-			function ($scope)
-			{
-				$scope.Users =
-			  [
-			    {Uname: 'sidhantgupta004', password: '123shop'},
-			    {Uname: 'guptasidhant004', password: 'shopper345'},
-			    {Uname: 'rohitC', password: '99shopper'}
-			  ]
-			},
-
-		  function Check ($scope)
-		  {
-
-			  for(cust in $scope.Users)
-			    {
-			      c=0
-			      if($scope.cust.Uname===ID && $scope.cust.password===Pwd)
-			      {
-			        alert('Login Successful.');
-			        loggedIn = true;
-			        c++;
-			      }
-			    }
-			    if (c===0)
-			    {
-			      alert('Wrong credentials. Login failed.');
-			      loggedIn = false;
-			    }
-		  }
-		  )
-		</script>
+		<script src = 'login.js'></script>
 
 	</body>
 </html>
