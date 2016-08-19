@@ -48,8 +48,9 @@
 					</div>
 					<br />
 					<div class="btn-group" role="group" aria-label="...">
-						 <button type="button" class="btn btn-default" onClick = 'Check()'>Login</button>
+						 <button type="button" class="btn btn-default">Login</button>
 					</div>
+					<script>check()</script>
 
 
 
@@ -78,7 +79,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
 		</div>
 
 		<script src = 'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js'></script>
@@ -129,7 +129,7 @@
 			  for(cust in $scope.Users)
 			    {
 			      c=0
-			      if($scope.cust.Uname===ID && $scope.cust.password===Pwd)
+			      if($scope.cust.Uname===$scope.ID && $scope.cust.password===$scope.Pwd)
 			      {
 			        alert('Login Successful.');
 			        loggedIn = true;
