@@ -36,4 +36,4 @@ I would like thank all the seniors for showing constant concern and guidance dur
 
 ##Contact
 All criticism and suggestions are welcome with regard to this project and its documentation.
-*Email ID: guptasidhant004@gmail.com
+* Email ID: guptasidhant004@gmail.com
