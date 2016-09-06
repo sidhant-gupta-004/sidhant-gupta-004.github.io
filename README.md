@@ -21,15 +21,15 @@ This page displays all the products available on the website and allows the user
 The purpose of this page was supposed to be to display the items added by the users to the cart and allow them to perform checkout operations. However, this page has not been designed and does not work.
 
 ##Built With
-*Bootstrap - http://getbootstrap.com/components/ - This was used for creating buttons, navbar, and the login/signup boxes.
-*Font Awesome - http://fontawesome.io/icon/user/ - This was used to provide the icon in the login boxes.
-*angularjs.org - http://angularjs.org - This was used to attach the angularjs file to the code of the Login Page, the stable, uncompressed version was used.
+* Bootstrap - http://getbootstrap.com/components/ - This was used for creating buttons, navbar, and the login/signup boxes.
+* Font Awesome - http://fontawesome.io/icon/user/ - This was used to provide the icon in the login boxes.
+* angularjs.org - http://angularjs.org - This was used to attach the angularjs file to the code of the Login Page, the stable, uncompressed version was used.
 
 ##Further Development
 The final and complete version of this project will be completed by me soon. The reason why I am concluding it right now is that I do not have the syntax, and more importantly, the basics of AngularJS clear. Also, I believe I need to understand JavaScript as a whole a bit more deeply. For these purposes, I will first complete the CS50x course which was given to all first years earlier.
 
 ##Author
-*Sidhant Gupta - https://github.com/sidhant-gupta-004
+**Sidhant Gupta** - https://github.com/sidhant-gupta-004
 
 ##Acknowledgements
 I would like thank all the seniors for showing constant concern and guidance during the course of this project. I would also like to thank Tony etta for inculcating the habit of daily status updates as they serve as an effective log of my efficiency (or the lack of it).
