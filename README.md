@@ -35,5 +35,5 @@ The final and complete version of this project will be completed by me soon. The
 I would like thank all the seniors for showing constant concern and guidance during the course of this project. I would also like to thank Tony etta for inculcating the habit of daily status updates as they serve as an effective log of my efficiency (or the lack of it).
 
 ##Contact
-All criticism and suggestions are welcome with regard to this project and its documentation.
+All criticism and suggestions with regard to this project and its documentation are welcome.
 * Email ID: guptasidhant004@gmail.com
